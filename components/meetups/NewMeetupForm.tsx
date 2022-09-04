@@ -4,18 +4,18 @@ import Card from "../ui/Card";
 import classes from "./NewMeetupForm.module.css";
 
 const NewMeetupForm = (props: any) => {
-  const titleInputRef = useRef();
-  const imageInputRef = useRef();
-  const addressInputRef = useRef();
-  const descriptionInputRef = useRef();
+  const titleInputRef: any = useRef();
+  const imageInputRef: any = useRef();
+  const addressInputRef: any = useRef();
+  const descriptionInputRef: any = useRef();
 
   function submitHandler(event: any) {
     event.preventDefault();
 
-    const enteredTitle = titleInputRef.current?.value;
-    const enteredImage = imageInputRef.current?.value;
-    const enteredAddress = addressInputRef.current?.value;
-    const enteredDescription = descriptionInputRef.current?.value;
+    const enteredTitle = titleInputRef.current.value;
+    const enteredImage = imageInputRef.current.value;
+    const enteredAddress = addressInputRef.current.value;
+    const enteredDescription = descriptionInputRef.current.value;
 
     const meetupData = {
       title: enteredTitle,
@@ -47,7 +47,7 @@ const NewMeetupForm = (props: any) => {
           <textarea
             id="description"
             required
-            rows="5"
+            rows={5}
             ref={descriptionInputRef}
           ></textarea>
         </div>
